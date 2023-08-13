@@ -1,4 +1,4 @@
-# 🌐 Text Translator and Text-to-Speech Web Application 🗣️
+# 🌐 Text Translator and Text to Speech Web Application 🗣️
 
 Welcome to my Text Translator and Text-to-Speech Flask Web Application repository! This project showcases a user-friendly web application built using Flask, Google Translate API, and gTTS (Google Text-to-Speech) library.
 
