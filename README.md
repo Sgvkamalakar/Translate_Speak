@@ -29,6 +29,7 @@ A Flask-based web application that lets you translate text between languages and
 - Select your target language from the dropdown menu.
 - Click the "Translate" button to see and hear the translated text in audio.
 
+![image](https://github.com/Sgvkamalakar/Text_Translator_Text_To_Speech/assets/103712713/847dd4f1-8376-40d2-8870-9267231ec42e)
 
 # 🤝 Contributions:
 Contributions, suggestions, and feedback are welcome! Feel free to fork this repository and create pull requests. Let's build a powerful and user-friendly translation tool together.
