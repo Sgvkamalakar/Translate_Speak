@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Translator</title><link rel="icon" href="static/favicon.jpeg" type="image/x-icon">
+    <link rel="shortcut icon" href="static/favicon.jpeg" type="image/x-icon">    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('/static/bg.jpeg'); /* Path to your background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #333;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            font-weight: bold;
+            color: #555;
+        }
+        textarea, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        h2 {
+            margin: 20px 0 10px;
+            color: #333;
+        }
+        p {
+            padding: 10px;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        
+    .za3ale .tw-menu-btn-image {
+    padding-top: 12px;
+    padding-bottom: 8px;
+}
+        
+    </style>
+</head>
+
+<body>
+    <h1>Text Translator</h1>
+    <div class="container">
+        
+        <form method="POST">
+            <label for="input_text">Enter the text to be translated:</label><br>
+            <textarea name="input_text" rows="4" cols="10" style="width: 564px;height: 30px;" required></textarea>
+            <label for="target_language">Select the target language:</label><br>
+            <select name="target_language">
+                {% for lang in languages %}
+                    <option value="{{ lang.code }}">{{ lang.name }}</option>
+                {% endfor %}
+            </select><br><br>
+            <input type="submit" value="Translate">
+        </form>
+        
+        {% if input_text %}
+        <h2>Input text:</h2>
+        <p>{{ input_text }}</p>
+        {% endif %}
+        {% if translated_text %}
+        <h2>Translated text:</h2>
+        <audio controls>
+        <source src="{{ audio_filename }}" type="audio/mpeg">
+        </audio>
+        <p>{{ translated_text }}</p>
+        {% endif %}
+
+    </span>
+    </div>
+</body>
+</html>
